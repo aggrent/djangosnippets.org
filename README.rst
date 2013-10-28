@@ -1,5 +1,5 @@
-djangosnippets.org
-==================
+haskellcookbook.com
+===================
 
-This code is used to power the snippet sharing site, djangosnippets.org
+This code is used to power haskellcookbook.com, forked from djangosnippets.org
 
