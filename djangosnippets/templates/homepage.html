@@ -12,14 +12,14 @@
   <h3>Latest snippets posted:</h3>
   <ul>
   {% for snippet in "cab.snippet"|latest:5 %}
-    <li><a href="{{ snippet.get_absolute_url }}">{{ snippet.title }}</a> (<a href="{{ snippet.language.get_absolute_url }}">{{ snippet.language.name }}</a>) by <a href="/users/{{ snippet.author.username }}/">{{ snippet.author.username }}</a> {{ snippet.pub_date|timesince }} ago</li>
+    <li><a href="{{ snippet.get_absolute_url }}">{{ snippet.title }}</a> by <a href="/users/{{ snippet.author.username }}/">{{ snippet.author.username }}</a> {{ snippet.pub_date|timesince }} ago</li>
   {% endfor %}
   </ul>
 
   <h3>Top-rated snippets:</h3>
   <ol>
   {% for snippet in "cab.snippet"|call_manager:"top_rated"|slice:":5" %}
-    <li><a href="{{ snippet.get_absolute_url }}">{{ snippet.title }}</a> (<a href="{{ snippet.language.get_absolute_url }}">{{ snippet.language.name }}</a>) by <a href="/users/{{ snippet.author.username }}/">{{ snippet.author.username }}</a></li>
+    <li><a href="{{ snippet.get_absolute_url }}">{{ snippet.title }}</a> by <a href="/users/{{ snippet.author.username }}/">{{ snippet.author.username }}</a></li>
   {% endfor %}
   </ol>
 
@@ -33,13 +33,13 @@
 {% endblock %}
 
 {% block sidebar %}
-  <p>Welcome to <a href="https://djangosnippets.org/">Djangosnippets.org</a>, a site for users of the <a href="https://www.djangoproject.com/">Django web framework</a> to come together and share useful "snippets" of reusable code.</p>
+<div class="panel">
+  <p>Welcome to <a href="http://haskellcookbook.com/">Haskell Cookbook</a>, a site to share useful haskell code, called recipes.</p>
 
-  <p>If you're just here to browse, you can look through snippets organized <a href="/users/">by author</a>, <a href="/languages/">by language</a> or <a href="/tags/">by tag</a>. You can also have a look at the <a href="/popular/rated/">top-rated snippets</a> and the <a href="/popular/bookmarked/">most-bookmarked snippets</a>.</p>
+  <p>If you're just here to browse, you can look through recipes organized <a href="/users/">by author</a> or <a href="/tags/">by tag</a>. You can also have a look at the <a href="/popular/rated/">top-rated recipes</a> and the <a href="/popular/bookmarked/">most-bookmarked ones</a>.</p>
 
-  <p>If you'd like to contribute, <a href="/accounts/register/">sign up for a free account</a> and you'll be able to post snippets of your own, rate and bookmark snippets, and post comments. If you've got any questions, have a look at our <a href="/about/faq/">FAQ</a>.</p>
+  <p>If you'd like to contribute, <a href="/accounts/register/">sign up for a free account</a> and you'll be able to post your own recipes, rate and bookmark recipes, and post comments. If you've got any questions, have a look at our <a href="/about/faq/">FAQ</a>.</p>
 
-  <p><a rel="alternate" href="/feeds/latest/" type="application/atom+xml"><img src="{% static "img/feed-icon-10x10.png" %}" alt="" /> Feed of latest snippets</a></p>
-
-  <p><a href="https://readthedocs.org/">Find documentation</a> for popular open source apps</p>
+  <p><a rel="alternate" href="/feeds/latest/" type="application/atom+xml"><img src="{% static "img/feed-icon-10x10.png" %}" alt="" /> Feed of latest Recipes</a></p>
+</div>
 {% endblock %}

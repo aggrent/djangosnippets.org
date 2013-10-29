@@ -25,7 +25,7 @@ You may use <a href="http://daringfireball.net/projects/markdown/syntax">Markdow
     {{ form.timestamp }}
     {{ form.security_hash }}
 </div>
-    <input type="submit" name="preview" value="{% trans "Preview comment" %}" />
+    <button type="submit" name="preview" class="small" value="{% trans "Preview comment" %}">{% trans "Preview comment" %}</button>
 </dt>
 </dl>
 </form>
@@ -37,7 +37,7 @@ You may use <a href="http://daringfireball.net/projects/markdown/syntax">Markdow
 <dt><label for="id_password">{% trans "Password:" %}</label></dt>
 <dd><input type="password" name="password" id="id_password" /> (<a href="/accounts/password_reset/">{% trans "Forgotten your password?" %}</a>)</dd>
 <dt></dt>
-<dd><input type="submit" value="Login" /></dd>
+<dd><button type="submit" class="small" value="Login">Login</button></dd>
 </dl>
 <input type="hidden" name="next" value="{{ request.get_full_path }}" />
 </form>
