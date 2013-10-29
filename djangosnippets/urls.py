@@ -43,4 +43,5 @@ urlpatterns = patterns('',
     url(r'^users/(?P<username>[-\w]+)/$', 'cab.views.snippets.author_snippets',
         name='cab_author_snippets'),
     url(r'^$', lambda request: render(request, 'homepage.html')),
+    url(r'^f/', include('foundation.urls')),
 )
