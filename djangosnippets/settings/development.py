@@ -35,3 +35,7 @@ STATICFILES_DIRS = (
     os.path.join(PROJECT_ROOT, "static"),
 )
 
+# for debug toolbar
+MIDDLEWARE_CLASSES += ('debug_toolbar.middleware.DebugToolbarMiddleware',)
+INSTALLED_APPS += ('debug_toolbar',)
+INTERNAL_IPS = ('127.0.0.1',)

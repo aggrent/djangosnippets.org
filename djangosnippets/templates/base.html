@@ -19,6 +19,7 @@
   {% endblock foundation_css %}  
   {% block css %}  
   <link rel="stylesheet" href="{% static "css/pygments.css" %}" type="text/css" />
+  <link rel="stylesheet" href="{% static "css/snippets.css" %}" type="text/css" />
   {% endblock css %}
   <link rel="alternate" href="/feeds/latest/" type="application/atom+xml" title="Feed of latest snippets" />
   {% block feeds %}{% endblock %}
@@ -32,7 +33,7 @@
 	<ul class="button-group">
           {% if user.is_authenticated %}
           <li id="nav-account" class="button"><a href="/users/{{ user.username }}/">You</a></li>
-          <li id="add-recipe" class="button"><a href="/snippets/add/">Add a recipe</a></li>
+          <li id="add-recipe" class="button"><a href="/recipes/add/">Add a recipe</a></li>
 	  <li id="logout" class="button"><a href="/accounts/logout/">Log out</a></li>
           {% else %}
           <li id="login" class="button"><a href="/accounts/login/?next={% ifequal request.path "/accounts/logout/" %}/{% else %}{{ request.path }}{% endifequal %}">Log in</a></li>

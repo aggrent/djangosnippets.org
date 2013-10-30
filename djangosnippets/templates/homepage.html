@@ -2,33 +2,18 @@
 {% load static from staticfiles %}
 {% load core_tags %}
 
-{% block title %}Welcome{% endblock %}
-
-{% block content_header %}Welcome{% endblock %}
+{% block title %}Home{% endblock %}
 
 {% block content %}
   {% load cache %}
   {% cache 600 homepage %}
-  <h3>Latest snippets posted:</h3>
-  <ul>
-  {% for snippet in "cab.snippet"|latest:5 %}
+  <h1> {{ "cab.snippet"|call_manager:"count" }} recipes.</h1>
+  <h3>Latest recipes</h3>
+  <ul id="latest-recipes">
+  {% for snippet in "cab.snippet"|latest:10 %}
     <li><a href="{{ snippet.get_absolute_url }}">{{ snippet.title }}</a> by <a href="/users/{{ snippet.author.username }}/">{{ snippet.author.username }}</a> {{ snippet.pub_date|timesince }} ago</li>
   {% endfor %}
   </ul>
-
-  <h3>Top-rated snippets:</h3>
-  <ol>
-  {% for snippet in "cab.snippet"|call_manager:"top_rated"|slice:":5" %}
-    <li><a href="{{ snippet.get_absolute_url }}">{{ snippet.title }}</a> by <a href="/users/{{ snippet.author.username }}/">{{ snippet.author.username }}</a></li>
-  {% endfor %}
-  </ol>
-
-  <h3>Top users:</h3>
-  <ol>
-  {% for author in "cab.snippet"|call_manager:"top_authors"|slice:":5" %}
-    <li><a href="/users/{{ author.username }}/">{{ author.username }}</a></li>
-  {% endfor %}
-  </ol>
   {% endcache %}
 {% endblock %}
 
