@@ -11,3 +11,4 @@ django-taggit==0.10
 #-e git+https://github.com/django-de/cab#egg=cab
 -e git+https://github.com/jezdez/django-simple-ratings#egg=django-simple-ratings
 -e git://github.com/amarsahinovic/django-zurb-foundation.git#egg=django-zurb-foundation
+django-taggit-autosuggest==0.2

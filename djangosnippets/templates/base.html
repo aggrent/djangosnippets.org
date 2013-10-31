@@ -8,10 +8,7 @@
   <title>Haskell Cookbook :: {% block title %}Home{% endblock %}</title>
   {% endblock base_title %}
 
-  <!-- <link href="//ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/> -->
-  <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script> -->
-  <!-- <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script> -->
-
+  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
   <link rel="shortcut icon" type="image/x-icon" href="{% static "img/favicon.ico" %}" />
   {% block foundation_css %}
   <link rel="stylesheet" href="{% static 'foundation/css/normalize.css' %}" />
@@ -21,7 +18,7 @@
   <link rel="stylesheet" href="{% static "css/pygments.css" %}" type="text/css" />
   <link rel="stylesheet" href="{% static "css/snippets.css" %}" type="text/css" />
   {% endblock css %}
-  <link rel="alternate" href="/feeds/latest/" type="application/atom+xml" title="Feed of latest snippets" />
+  <link rel="alternate" href="/feeds/latest/" type="application/atom+xml" title="Feed of latest Recipes" />
   {% block feeds %}{% endblock %}
 
   {% block extra_scripts %}{% endblock %}

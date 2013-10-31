@@ -52,6 +52,7 @@ INSTALLED_APPS = (
     'registration',
     'south',
     'taggit',
+    'taggit_autosuggest',
     'captcha',
     'foundation',
 )
