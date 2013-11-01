@@ -1,0 +1,11 @@
+@import "foundation";
+
+$bg: darken($secondary-color, 20%);
+$radius: 3px;
+$disabled: false;
+
+.your-class-name {
+  @include button-base;
+  @include button-size;
+  @include button-style($bg, $radius, $disabled);
+}

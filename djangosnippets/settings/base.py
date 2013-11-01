@@ -54,7 +54,7 @@ INSTALLED_APPS = (
     'taggit',
     'taggit_autosuggest',
     'captcha',
-    'foundation',
+    'pipeline',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -114,3 +114,19 @@ CAB_VERSIONS = (
 RECAPTCHA_PUBLIC_KEY = os.environ.get('RECAPTCHA_PUBLIC_KEY', '')
 RECAPTCHA_PRIVATE_KEY = os.environ.get('RECAPTCHA_PRIVATE_KEY', '')
 RECAPTCHA_USE_SSL = True
+
+STATICFILES_STORAGE = 'pipeline.storage.PipelineCachedStorage'
+
+
+PIPELINE_COMPILERS = (
+'pipeline.compilers.sass.SASSCompiler',
+)
+
+PIPELINE_CSS = {
+    "foundation": {
+        "source_filenames": (
+           "scss/mybutton.scss",
+        ),
+        "output_filename": "css/style.css",
+    },
+}

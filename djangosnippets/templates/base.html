@@ -11,8 +11,8 @@
   <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
   <link rel="shortcut icon" type="image/x-icon" href="{% static "img/favicon.ico" %}" />
   {% block foundation_css %}
-  <link rel="stylesheet" href="{% static 'foundation/css/normalize.css' %}" />
-  <link rel="stylesheet" href="{% static 'foundation/css/foundation.min.css' %}" />
+  {% load compressed %}
+  {% compressed_css 'foundation' %}
   {% endblock foundation_css %}  
   {% block css %}  
   <link rel="stylesheet" href="{% static "css/pygments.css" %}" type="text/css" />
@@ -70,7 +70,7 @@
 	<div>
           <form method="get" action="/search/">
             <input type="text" name="q" id="id_q" value="{{ request.GET.q }}" placeholder="Search" />
-            <button class="small" type="submit">Go</button>
+            <button class="your-class-name" type="submit">Go</button>
           </form>
 	</div>
 	{% block sidebar %}
