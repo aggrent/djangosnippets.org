@@ -1,6 +1,7 @@
 from django.conf.urls.defaults import url, patterns, include
 from django.contrib import admin
 from django.shortcuts import render
+from django.views.generic import TemplateView
 
 from haystack.views import SearchView, search_view_factory
 
@@ -44,4 +45,6 @@ urlpatterns = patterns('',
         name='cab_author_snippets'),
     url(r'^$', lambda request: render(request, 'homepage.html')),
     url(r'^taggit_autosuggest/', include('taggit_autosuggest.urls')),
+    url(r'^faq/$', TemplateView.as_view(template_name="faq.html")),                       
+    url(r'^about/$', TemplateView.as_view(template_name="about.html")),                       
 )
