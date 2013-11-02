@@ -55,6 +55,8 @@ INSTALLED_APPS = (
     'taggit_autosuggest',
     'captcha',
     'pipeline',
+    'epiceditor',
+    'codemirror',
 )
 
 MIDDLEWARE_CLASSES = (
