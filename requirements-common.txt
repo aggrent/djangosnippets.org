@@ -7,8 +7,8 @@ django-haystack>=2.1
 django-pagination==1.0.7
 django-registration==1.0
 django-taggit==0.10
-
-#-e git+https://github.com/django-de/cab#egg=cab
+dj-database-url==0.2.2
+-e git+https://github.com/aggrent/cab#egg=cab
 -e git+https://github.com/jezdez/django-simple-ratings#egg=django-simple-ratings
 -e git://github.com/amarsahinovic/django-zurb-foundation.git#egg=django-zurb-foundation
 django-taggit-autosuggest==0.2

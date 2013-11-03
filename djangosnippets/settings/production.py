@@ -36,7 +36,7 @@ SESSION_COOKIE_HTTPONLY = True
 SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 
 ALLOWED_HOSTS = [
-    'djangosnippets.org',
+    'haskellcookbook.com',
 ]
 
 STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
