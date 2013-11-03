@@ -10,7 +10,7 @@ MANAGERS = ADMINS
 
 
 SITE_ID = 1
-SITE_NAME = 'djangosnippets.org'
+SITE_NAME = 'haskellcookbook.com'
 
 DEBUG = TEMPLATE_DEBUG = False
 
@@ -19,9 +19,9 @@ LANGUAGE_CODE = 'en-us'
 USE_I18N = True
 USE_TZ = False
 
-DEFAULT_FROM_EMAIL = 'no-reply@djangosnippets.org'
-SERVER_EMAIL = 'no-reply@djangosnippets.org'
-EMAIL_SUBJECT_PREFIX = '[djangosnippets] '
+DEFAULT_FROM_EMAIL = 'no-reply@hsakellcookbook.com'
+SERVER_EMAIL = 'no-reply@hsakellcookbook.com'
+EMAIL_SUBJECT_PREFIX = '[Haskell Cookbook] '
 
 FORCE_WWW = False
 
@@ -143,8 +143,6 @@ PIPELINE_CSS = {
 }
 
 AUTHENTICATION_BACKENDS = (
-    # Needed to login by username in Django admin, regardless of `allauth`
     'django.contrib.auth.backends.ModelBackend',
-    # `allauth` specific authentication methods, such as login by e-mail
     'allauth.account.auth_backends.AuthenticationBackend',
 )

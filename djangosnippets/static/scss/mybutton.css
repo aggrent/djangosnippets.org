@@ -4493,6 +4493,9 @@ a.th {
   .f-dropdown.large {
     max-width: 800px; }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Ubuntu', sans-serif; }
+
 .your-class-name {
   border-style: solid;
   border-width: 1px;
@@ -4530,7 +4533,7 @@ ul.tags {
   list-style: none outside none; }
   ul.tags li {
     margin-bottom: 0.8em; }
-  ul.tags a:link, ul.tags .tags a:visited, ul.tags .tags a:hover, ul.tags .tags a:focus, ul.tags .tags a:active, ul.tags a.flow-tag:link, ul.tags a.flow-tag:visited, ul.tags a.flow-tag:hover, ul.tags a.flow-tag:focus, ul.tags a.flow-tag:active, ul.tags .content .tags .selected a:hover, ul.tags .content .tags .selected a:focus, ul.tags .content .tags .selected a:active {
+  ul.tags a:link, ul.tags a:visited, ul.tags a:hover, ul.tags a:focus, ul.tags a:active {
     background-color: #111;
     border: medium none;
     border-radius: 4px 4px 4px 4px;
@@ -4546,3 +4549,39 @@ ul.socialaccount_providers {
   ul.socialaccount_providers li {
     display: inline;
     padding-right: 20px; }
+
+table.highlighttable {
+  font-family: 'Source Code Pro', sans-serif;
+  font-size: 14px; }
+
+#latest-recipes {
+  list-style: none; }
+  #latest-recipes li {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 1px solid #eee; }
+
+ul.snippet_list {
+  list-style: none; }
+  ul.snippet_list li {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 1px solid #eee; }
+
+ul.search_results {
+  list-style: none; }
+  ul.search_results li {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 1px solid #eee; }
+
+span.tag_item a:link, span.tag_item a:visited, span.tag_item a:hover, span.tag_item a:focus, span.tag_item a:active {
+  background-color: #111;
+  border: medium none;
+  border-radius: 4px 4px 4px 4px;
+  color: #FFFFFF;
+  padding: 5px 9px 6px; }
+span.tag_item a:link .result-count, span.tag_item a:visited .result-count, span.tag_item a:hover .result-count, span.tag_item a:focus .result-count, span.tag_item a:active .result-count {
+  color: #ccc;
+  position: relative;
+  left: 5px; }

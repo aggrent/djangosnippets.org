@@ -5,19 +5,21 @@
 {% block content_header %}Search{% endblock %}
 
 {% block content %}
-  <form method="get" action=".">
-    <dl>
-      <dt><label for="id_q">Search:</dt>
-      <dd>{{ form.q }}</dd>
-      <dt></dt>
-      <dd><button type="submit" class="small" value="Search">Search</button></dd>
-    </dl>
-  </form>
+<form method="get" action=".">
+  <div class="row collapse">
+    <div class="large-8 columns">
+      <input type="text" name="q" id="id_q" value="{{ request.GET.q }}" placeholder="Search"/>
+    </div>
+    <div class="large-4 columns">
+      <button class="small" type="submit">Search</button>
+    </div>
+  </div>
+</form>
   {% if query %}
     <h3>Results</h3>
-    <ul>
+    <ul class="search_results">
     {% for result in page.object_list %}
-    <li><a href="{{ result.object.get_absolute_url }}">{{ result.object.title }}</a>, by <a href="/users/{{ result.object.author.username }}/">{{ result.object.author.username }}</a> (user rating: {{ result.object.rating_score }})</li>
+    <li><a href="{{ result.object.get_absolute_url }}">{{ result.object.title }}</a>, by <a href="/users/{{ result.object.author.username }}/">{{ result.object.author.username }}</a></li>
     {% empty %}
       <li>No results found.</li>
     {% endfor %}

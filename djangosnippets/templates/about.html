@@ -6,16 +6,11 @@
 
 {% block content %}
   <h3>About</h3>
+<p>Haskell cookbook is a site for sharing haskell code snippets, in the same vein as <a href="http://code.activestate.com/recipes/langs/python/">Python recipes</a>.</p>
+<p>The site is <a href="https://github.com/aggrent/haskellcookbook.com">forked</a> <a href="https://github.com/aggrent/cab">from</a> <a href="http://djangosnippets.org/">django snippets</a> and uses a <a href="http://foundation.zurb.com/">Foundation</a> based theme for the frontend. The social icons used in login page are the courtesy of <a href="http://icondock.com/">Icondock</a>.</p>
+<p><a href="http://epiceditor.com/">EpicEditor</a>, <a href="http://codemirror.net/">Pygments</a> and <a href="http://pygments.org/">CodeMirror</a> are the plugins used to add and edit code.
+ Haskellcookbook is proudly hosted at <a href="https://www.openshift.com/">Openshift</a>.</p>
 {% endblock %}
 
 {% block sidebar %}
-<div class="panel">
-  <p>Welcome to <a href="http://haskellcookbook.com/">Haskell Cookbook</a>, a site to share useful haskell code, called recipes.</p>
-
-  <p>If you're just here to browse, you can look through recipes organized <a href="/users/">by author</a> or <a href="/tags/">by tag</a>. You can also have a look at the <a href="/popular/rated/">top-rated recipes</a> and the <a href="/popular/bookmarked/">most-bookmarked ones</a>.</p>
-
-  <p>If you'd like to contribute, <a href="/accounts/register/">sign up for a free account</a> and you'll be able to post your own recipes, rate and bookmark recipes, and post comments. If you've got any questions, have a look at our <a href="/about/faq/">FAQ</a>.</p>
-
-  <p><a rel="alternate" href="/feeds/latest/" type="application/atom+xml"><img src="{% static "img/feed-icon-10x10.png" %}" alt="" /> Feed of latest Recipes</a></p>
-</div>
 {% endblock %}

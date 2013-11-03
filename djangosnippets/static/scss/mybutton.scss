@@ -4,6 +4,10 @@ $bg: darken($secondary-color, 20%);
 $radius: 3px;
 $disabled: false;
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Ubuntu', sans-serif;
+}
+
 .your-class-name {
   @include button-base;
   @include button-size;
@@ -23,7 +27,7 @@ ul.tags {
     margin-bottom: 0.8em;
   }
 
-  a:link, .tags a:visited, .tags a:hover, .tags a:focus, .tags a:active, a.flow-tag:link, a.flow-tag:visited, a.flow-tag:hover, a.flow-tag:focus, a.flow-tag:active, .content .tags .selected a:hover, .content .tags .selected a:focus, .content .tags .selected a:active {
+  a:link, a:visited, a:hover, a:focus, a:active {
     background-color: #111;
     border: medium none;
     border-radius: 4px 4px 4px 4px;
@@ -44,3 +48,51 @@ ul.socialaccount_providers {
     padding-right: 20px;
   }    
 }
+
+table.highlighttable {
+ font-family: 'Source Code Pro', sans-serif;
+ font-size: 14px;
+}
+
+#latest-recipes {
+  list-style:none;
+  li {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 1px solid #eee;
+  }
+}
+
+ul.snippet_list {
+  list-style:none;
+  li {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 1px solid #eee;
+  }
+}
+
+ul.search_results {
+  list-style:none;
+  li {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 1px solid #eee;
+  }
+}
+
+span.tag_item {
+  a:link, a:visited, a:hover, a:focus, a:active {
+    background-color: #111;
+    border: medium none;
+    border-radius: 4px 4px 4px 4px;
+    color: #FFFFFF;
+    padding: 5px 9px 6px;
+  }
+  a:link .result-count, a:visited .result-count, a:hover .result-count, a:focus .result-count, a:active .result-count {
+    color: #ccc;
+    position: relative;
+    left: 5px;
+  }  
+}
+
