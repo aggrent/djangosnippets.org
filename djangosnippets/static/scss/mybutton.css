@@ -4519,3 +4519,30 @@ a.th {
     background-color: #9d9d9d; }
   .your-class-name:hover, .your-class-name:focus {
     color: #333333; }
+
+#main-menu a {
+  color: #fff; }
+
+ul.tags {
+  line-height: 1.55em;
+  margin-bottom: 1.3em;
+  padding-top: 0.3em;
+  list-style: none outside none; }
+  ul.tags li {
+    margin-bottom: 0.8em; }
+  ul.tags a:link, ul.tags .tags a:visited, ul.tags .tags a:hover, ul.tags .tags a:focus, ul.tags .tags a:active, ul.tags a.flow-tag:link, ul.tags a.flow-tag:visited, ul.tags a.flow-tag:hover, ul.tags a.flow-tag:focus, ul.tags a.flow-tag:active, ul.tags .content .tags .selected a:hover, ul.tags .content .tags .selected a:focus, ul.tags .content .tags .selected a:active {
+    background-color: #111;
+    border: medium none;
+    border-radius: 4px 4px 4px 4px;
+    color: #FFFFFF;
+    padding: 5px 9px 6px; }
+  ul.tags a:link .result-count, ul.tags a:visited .result-count, ul.tags a:hover .result-count, ul.tags a:focus .result-count, ul.tags a:active .result-count {
+    color: #ccc;
+    position: relative;
+    left: 5px; }
+
+ul.socialaccount_providers {
+  list-style: none outside none; }
+  ul.socialaccount_providers li {
+    display: inline;
+    padding-right: 20px; }
