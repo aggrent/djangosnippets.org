@@ -17,7 +17,7 @@ class CabRegistrationView(RegistrationView):
 
 
 urlpatterns = patterns('',
-    url(r'^accounts/', include('django.contrib.auth.urls')),
+    url(r'^accounts/', include('allauth.urls')),
     url(r'^accounts/register/$', CabRegistrationView.as_view(),
         name='registration_register'),
     url(r'^accounts/', include('registration.backends.default.urls')),
